@@ -1,0 +1,13 @@
+default: &default
+  adapter: postgresql
+  pool: 16
+  timeout: 5000
+
+development:
+  <<: *default
+  database: quiz_dev
+
+test:
+  <<: *default
+  database: quiz_test
+
